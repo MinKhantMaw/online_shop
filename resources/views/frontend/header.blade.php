@@ -27,16 +27,16 @@
                       <li class="nav-item">
                           @if (Route::has('login'))
                               @auth
-                          <li class="nav-item ">
-                              <a class="nav-link" href="{{ route('show-cart') }}">
-                                  <i class="fas fa-shopping-cart ms-1"></i>
-                                  Cart[{{ $count }}]
-                              </a>
-                          </li>
-                          <x-app-layout>
+                                  <li class="nav-item ">
+                                      <a class="nav-link" href="{{ route('show-cart') }}">
+                                          <i class="fas fa-shopping-cart ms-1"></i>
+                                          Cart[{{ $count }}]
+                                      </a>
+                                  </li>
+                                  <x-app-layout>
 
-                          </x-app-layout>
-                      @else
+                                  </x-app-layout>
+                          @else
                           <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Log in</a>
                           </li>
 

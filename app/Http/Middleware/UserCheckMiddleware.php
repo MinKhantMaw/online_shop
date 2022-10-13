@@ -17,7 +17,7 @@ class UserCheckMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->role == 'user'){
+        if (Auth::check() && Auth::user()->role == 'user') {
             return $next($request);
         }
         return back();

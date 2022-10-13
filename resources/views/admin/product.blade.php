@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
-@section('title','Product List')
-@section('product','mm-active')
+@section('title', 'Product List')
+@section('product', 'mm-active')
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -22,7 +22,6 @@
                                     <th>Name</th>
                                     <th>Image</th>
                                     <th>Price</th>
-
                                     <th>Qualtity</th>
                                     <th>Action</th>
                                 </tr>
@@ -32,12 +31,19 @@
                                     <tr>
                                         <td>{{ $list->id }}</td>
                                         <td>{{ $list->name }}</td>
-                                        <td><img src="{{ asset('image/' . $list->image) }}" width="100px" alt=""></td>
+                                        <td><img src="{{ asset('image/' . $list->image) }}" width="100px" alt="">
+                                        </td>
                                         <td>{{ $list->price }}</td>
                                         <td>{{ $list->quantity }}</td>
                                         <td>
-                                            <a href="{{ route('edit', $list->id) }}" class="btn btn-primary">Edit</a>
-                                            <a href="{{ route('delete', $list->id) }}" class="btn btn-danger">Delete</a>
+                                            <a href="{{ route('edit', $list->id) }}" class="btn  btn-sm btn-warning"> <i
+                                                    class="fa fa-edit"></i> Edit</a>
+                                            <a href="{{ route('details', $list->id) }}" class="btn btn-sm btn-primary"> <i
+                                                    class="fa fa-eye"></i>
+                                                View</a>
+                                            <a href="{{ route('delete', $list->id) }}"
+                                                class="btn btn-sm btn-danger">Delete</a>
+
                                         </td>
                                     </tr>
                                 @endforeach

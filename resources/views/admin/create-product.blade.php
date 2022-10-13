@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title','Create Product')
+@section('title', 'Create Product')
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -16,7 +16,7 @@
                             </ul>
                         </div>
                     @endif
-                    @if(session()->has('success'))
+                    @if (session()->has('success'))
                         <div class="alert alert-success m-3">
                             {{ session()->get('success') }}
                         </div>
@@ -28,24 +28,26 @@
                             @csrf
                             <div class="form-group">
                                 <label for="">Product Name</label>
-                                <input type="text" class="form-control rounded" value="{{ old('name') }}" name="name" id="" placeholder="Name">
+                                <input type="text" class="form-control rounded" value="{{ old('name') }}"
+                                    name="name" id="" placeholder="Name">
                             </div>
                             <div class="form-group">
                                 <label for="">Price</label>
-                                <input type="text" class="form-control rounded" value="{{ old('price') }}" name="price" id="" placeholder="Price">
+                                <input type="text" class="form-control rounded" value="{{ old('price') }}"
+                                    name="price" id="" placeholder="Price">
                             </div>
                             <div class="form-group">
                                 <label for="">Description</label>
-                                <input type="text" class="form-control rounded" value="{{ old('description') }}" name="description" id=""
-                                    placeholder="Description">
+                                <input type="text" class="form-control rounded" value="{{ old('description') }}"
+                                    name="description" id="" placeholder="Description">
                             </div>
                             <div class="form-group">
                                 <label for="">Quantity</label>
-                                <input type="text" class="form-control rounded" value="{{ old('quantity') }}" name="quantity" id=""
-                                    placeholder="Quantity">
+                                <input type="text" class="form-control rounded" value="{{ old('quantity') }}"
+                                    name="quantity" id="" placeholder="Quantity">
                             </div>
                             <div class="form-group">
-                                <input type="file" value="{{ old('image') }}" class="form-control" name="image">
+                                <input type="file" value="{{ old('image') }}" class="form-control img" name="image">
                             </div>
                             <input type="submit" class="btn btn-primary" value="Create">
                         </form>
@@ -55,4 +57,3 @@
         </div>
     </div>
 @endsection
-

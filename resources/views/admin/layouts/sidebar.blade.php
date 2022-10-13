@@ -35,6 +35,12 @@
               <ul class="vertical-nav-menu">
                   <li class="app-sidebar__heading">Dashboards</li>
                   <li>
+                      <a href="{{ route('user.list') }}" class="@yield('admin')">
+                          <i class="metismenu-icon pe-7s-users"></i>
+                          Admin User Management
+                      </a>
+                  </li>
+                  <li>
                       <a href="{{ route('product') }}" class="@yield('product')">
                           <i class="metismenu-icon pe-7s-rocket"></i>
                          Product

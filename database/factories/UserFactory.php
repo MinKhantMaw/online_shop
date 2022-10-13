@@ -48,7 +48,7 @@ class UserFactory extends Factory
     }
 
     /**
-     * Indicate that the user should have a personal team.
+     * Indicate that the frontend should have a personal team.
      *
      * @return $this
      */
